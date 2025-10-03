@@ -1,32 +1,31 @@
 /* Import this in the consumer app entry css:
-   @import '@your-org/ui/styles.css';
+   @import '@gsa/vue-ui/styles.css';
 */
 
-@layer base {
-  :root {
-    --ui-primary:  #168ac9;
-    --ui-dark:     #0b0b0b;
-    --ui-faint:    #f6f7fb;
-    --ui-faint-bl: #EAF6FF;
-    --shadow-soft: 0 2px 20px rgba(0, 0, 0, 0.05);
-  }
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+@plugin 'tailgrids/plugin';
 
+@theme {
+  --shadow-soft: 0 2px 20px rgba(0, 0, 0, 0.05);
+  --color-primary: #168ac9;
+  --color-dark: #0b0b0b;
+  --color-faint: #f6f7fb;
+  --color-faint-blue: #EAF6FF;
+}
+
+@layer base {
   .dark {
     --shadow-soft: 0 2px 20px rgba(0, 0, 0, 0.9);
   }
 }
 
 @layer components {
-  .bg-faint       { background-color: var(--ui-faint); }
-  .bg-faint-blue  { background-color: var(--ui-faint-bl); }
-  .text-dark      { color: var(--ui-dark); }
-  .border-primary { border-color: var(--ui-primary); }
-  .bg-primary     { background-color: var(--ui-primary); }
-  .text-primary   { color: var(--ui-primary); }
+  .bg-faint       { background-color: var(--color-faint); }
+  .bg-faint-blue  { background-color: var(--color-faint-blue); }
+  .text-dark      { color: var(--color-dark); }
+  .border-primary { border-color: var(--color-primary); }
+  .bg-primary     { background-color: var(--color-primary); }
+  .text-primary   { color: var(--color-primary); }
   .shadow-soft    { box-shadow: var(--shadow-soft); }
-}
-
-/* Optional dark fallbacks for arbitrary colors used in components */
-@media (prefers-color-scheme: dark) {
-  .dark\\:bg-\\[\\#0E3954\\] { background-color: #0E3954 !important; }
 }

@@ -34,10 +34,10 @@
     "prepare": "npm run build"
   },
   "peerDependencies": {
-    "tailwindcss": ">=3.4 <5",
+    "tailgrids": "^2.3.0",
+    "tailwindcss": "^4.0.0",
     "vue": "^3.4.0",
-    "vue-icons-plus": "^0.1.8",
-    "tailgrids": "^2.3.0"
+    "vue-icons-plus": "^0.1.8"
   },
   "peerDependenciesMeta": {
     "tailwindcss": {
@@ -49,6 +49,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
+    "tailgrids": "^2.3.0",
+    "tailwindcss": "^4.1.14",
     "typescript": "^5.5.4",
     "vite": "^5.4.0",
     "vue": "^3.4.0",

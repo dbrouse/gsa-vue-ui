@@ -27,6 +27,7 @@ module.exports = {
     "text-primary",
     "bg-faint",
     "bg-faint-blue",
+    "shadow-soft",
     "dark:bg-[#0E3954]",
   ],
   plugins: [],

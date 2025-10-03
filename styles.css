@@ -1,8 +1,8 @@
-/* Import this in the consumer app entry css:
+/* Import this in the consumer app entry css AFTER @import 'tailwindcss':
+   @import 'tailwindcss';
    @import '@gsa/vue-ui/styles.css';
 */
 
-@import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 @plugin 'tailgrids/plugin';
 

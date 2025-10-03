@@ -1,0 +1,58 @@
+{
+  "name": "@your-org/ui",
+  "version": "0.1.0",
+  "description": "Your Org UI components for Vue 3",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./tailwind-preset": "./tailwind-preset.js",
+    "./styles.css": "./styles.css"
+  },
+  "files": [
+    "dist",
+    "tailwind-preset.js",
+    "styles.css"
+  ],
+  "sideEffects": [
+    "styles.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --project tsconfig.build.json",
+    "typecheck": "vue-tsc --noEmit",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=3.4 <5",
+    "vue": "^3.4.0",
+    "vue-icons-plus": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    },
+    "vue-icons-plus": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "vue": "^3.4.0",
+    "vue-icons-plus": "^0.1.8",
+    "vue-tsc": "^2.0.29"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/ui.git"
+  },
+  "license": "UNLICENSED"
+}

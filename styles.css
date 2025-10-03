@@ -1,0 +1,26 @@
+/* Import this in the consumer app entry css:
+   @import '@your-org/ui/styles.css';
+*/
+
+@layer base {
+  :root {
+    --ui-primary:  #168ac9;
+    --ui-dark:     #0b0b0b;
+    --ui-faint:    #f6f7fb;
+    --ui-faint-bl: #EAF6FF;
+  }
+}
+
+@layer components {
+  .bg-faint       { background-color: var(--ui-faint); }
+  .bg-faint-blue  { background-color: var(--ui-faint-bl); }
+  .text-dark      { color: var(--ui-dark); }
+  .border-primary { border-color: var(--ui-primary); }
+  .bg-primary     { background-color: var(--ui-primary); }
+  .text-primary   { color: var(--ui-primary); }
+}
+
+/* Optional dark fallbacks for arbitrary colors used in components */
+@media (prefers-color-scheme: dark) {
+  .dark\\:bg-\\[\\#0E3954\\] { background-color: #0E3954 !important; }
+}

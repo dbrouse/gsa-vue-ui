@@ -6,5 +6,5 @@ export default {
   content: [],
   // Tailwind v4 uses CSS @theme for theming instead of theme config
   // See styles.css for color and design token definitions
-  darkMode: 'class',
+  darkMode: "class",
 };

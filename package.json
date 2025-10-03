@@ -21,6 +21,7 @@
   },
   "files": [
     "dist",
+    "src",
     "tailwind-preset.js",
     "styles.css"
   ],

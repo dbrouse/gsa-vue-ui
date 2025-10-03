@@ -30,5 +30,16 @@ module.exports = {
     "shadow-soft",
     "dark:bg-[#0E3954]",
   ],
-  plugins: [],
+  plugins: [
+    function ({ addUtilities, theme }) {
+      addUtilities({
+        '.shadow-soft': {
+          'box-shadow': '0 2px 20px rgba(0, 0, 0, 0.05)',
+        },
+        '.dark .shadow-soft': {
+          'box-shadow': '0 2px 20px rgba(0, 0, 0, 0.9)',
+        },
+      })
+    },
+  ],
 };
